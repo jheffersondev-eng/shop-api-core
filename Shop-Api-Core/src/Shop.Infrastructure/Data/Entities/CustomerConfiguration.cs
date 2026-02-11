@@ -12,8 +12,8 @@ public sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.CognitoSub).IsRequired().HasMaxLength(128);
-        builder.Property(x => x.Email).IsRequired().HasMaxLength(320);
-        builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
+        builder.Property(x => x.Email).IsRequired().HasMaxLength(100);
+        builder.Property(x => x.Name).IsRequired().HasMaxLength(100);
         builder.Property(x => x.Phone).HasMaxLength(30);
         builder.Property(x => x.CreatedAt).IsRequired();
 
