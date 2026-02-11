@@ -1,4 +1,4 @@
-namespace Shop_Api_Core
+namespace Shop.Domain.Entities
 {
     public class WeatherForecast
     {

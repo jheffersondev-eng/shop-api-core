@@ -1,0 +1,23 @@
+bin/
+obj/
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+*.dll
+*.pdb
+
+# EF Core
+**/Migrations/*-temp.cs
+
+# Logs
+*.log
+
+# Environment
+.env

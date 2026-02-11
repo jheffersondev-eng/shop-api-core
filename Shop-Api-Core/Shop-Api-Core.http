@@ -1,6 +1,0 @@
-@Shop_Api_Core_HostAddress = http://localhost:5123
-
-GET {{Shop_Api_Core_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

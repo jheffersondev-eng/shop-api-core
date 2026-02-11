@@ -1,8 +1,16 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Shop.Application;
+using Shop.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddMediatR(typeof(ApplicationAssemblyMarker).Assembly);
+builder.Services.AddDbContext<ShopDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("ShopDb")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
